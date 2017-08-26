@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tiêu đề</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<style>
+ div {
+    background-color: blue;
+    display: none;
+    float: left;
+    margin-right: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+</style>
+<script>
+$(function(){
+    $('.fade-in').click(function(){
+        $('.swing').fadeIn(2000,'swing',function(){
+            $(this).css('background-color','red');
+        });
+        
+        $('.linear').fadeIn(2000,'linear',function(){
+            $(this).css('background-color','yellow');
+        });
+    });
+
+    $('.fade-out').click(function(){
+        $('.swing').fadeOut(2000,'swing',function(){
+            $(this).css('background-color','black');
+        });
+        
+        $('.linear').fadeOut(2000,'linear',function(){
+            $(this).css('background-color','black');
+        });
+    });
+});
+</script>
+</head>
+
+<body>
+<p><button class="fade-in">FadeIn</button></p>
+<p><button class="fade-out">FadeOut</button></p>
+
+<div class="swing">fadeIn swing</div>
+<div class="linear">fadeIn linear</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<ul class="menu">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<p class="text">
+    Would you like to book our entire location for special event? Just send us an email with all the details and we’ll get back with a quote.
+</p>
+
+<button class="hide">Hide</button>
+<button class="show">Show</button>
+
+</body>
+</html>
+<script src="js/jquery.min.js" type="text/javascript" ></script>
+<script type="text/javascript">
+    $(".hide").click(function(){
+        $(".menu").hide(1000);
+        $('.text').hide(3000);
+    });
+
+    $(".show").click(function(){
+        $(".menu").show(5000);
+        $('.text').show();
+    });
+</script>
