@@ -15,7 +15,22 @@
         margin-bottom: 30px;
     }
 
+    .button {
+        width: 700px;
+        margin: auto;
+    }
+
+    .btn-add {
+        background: mediumorchid;
+        height: 45px;
+        line-height: 40px;
+        border: 1px solid mediumorchid;
+        color: #fff;
+        font-weight: 900;
+    }
+
     .icon-close {
+        cursor: pointer;
         position: relative;
     }
 
@@ -37,40 +52,47 @@
     }
 </style>
 <body>
-    <div class="box">
-        <div class="icon-close">
-            <img src="images/cancel-icon.png" alt="icon">
-        </div>
-        <div class="box-color">
-                <div id="div1" style="width:150px;height:150px;background-color:red;">TEXT 1</div>
-                <div id="div2" style="width:150px;height:150px;background-color:green;">TEXT 2</div>
-                <div id="div3" style="width:150px;height:150px;background-color:blue;">TEXT 3</div>
-                <div id="div4" style="width:150px;height:150px;background-color:yellow;">TEXT 4</div>
-        </div>       
-    </div>    
+    <div class="warpper">
+        <div class="box box-first">
+            <div class="icon-close">
+                <img src="images/cancel-icon.png" alt="icon">
+            </div>
+            <div class="box-color">
+                    <div id="div1" style="width:150px;height:150px;background-color:red;">TEXT 1</div>
+                    <div id="div2" style="width:150px;height:150px;background-color:green;">TEXT 2</div>
+                    <div id="div3" style="width:150px;height:150px;background-color:blue;">TEXT 3</div>
+                    <div id="div4" style="width:150px;height:150px;background-color:yellow;">TEXT 4 APPEEND</div>
+            </div>       
+        </div>    
 
-    <div class="box">
-        <div class="icon-close">
-            <img src="images/cancel-icon.png" alt="icon">
+        <div class="box">
+            <div class="icon-close">
+                <img src="images/cancel-icon.png" alt="icon">
+            </div>
+            <div class="box-color">
+                    <div id="div1" style="width:150px;height:150px;background-color:red;">TEXT 1</div>
+                    <div id="div2" style="width:150px;height:150px;background-color:green;">TEXT 2</div>
+                    <div id="div3" style="width:150px;height:150px;background-color:blue;">TEXT 3</div>
+                    <div id="div4" style="width:150px;height:150px;background-color:pink;">TEXT 4</div>
+            </div>       
         </div>
-        <div class="box-color">
-                <div id="div1" style="width:150px;height:150px;background-color:red;">TEXT 1</div>
-                <div id="div2" style="width:150px;height:150px;background-color:green;">TEXT 2</div>
-                <div id="div3" style="width:150px;height:150px;background-color:blue;">TEXT 3</div>
-                <div id="div4" style="width:150px;height:150px;background-color:yellow;">TEXT 4</div>
-        </div>       
     </div>
 
-    <div class="box">
-        <div class="icon-close">
-            <img src="images/cancel-icon.png" alt="icon">
-        </div>
-        <div class="box-color">
-                <div id="div1" style="width:150px;height:150px;background-color:red;">TEXT 1</div>
-                <div id="div2" style="width:150px;height:150px;background-color:green;">TEXT 2</div>
-                <div id="div3" style="width:150px;height:150px;background-color:blue;">TEXT 3</div>
-                <div id="div4" style="width:150px;height:150px;background-color:yellow;">TEXT 4</div>
-        </div>       
+    <div class="button">
+        <button type="button" class="btn-add">ADD BUTTON</button>
     </div>
 </body>
 </html>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".icon-close").click(function(){
+            $(this).parents('.box').remove();
+            //$('.box').remove();
+        });
+
+        $(".btn-add").click(function(){
+            $(".box-first").clone().appendTo('.warpper');
+        });
+    });
+</script>
