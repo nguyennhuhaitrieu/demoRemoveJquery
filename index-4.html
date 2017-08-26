@@ -5,63 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery.min.js" type="text/javascript" ></script>
+    <script src="js/main.js" type="text/javascript" ></script>
 </head>
-<style>
-    .box {
-        border: 2px solid black;
-        width: 700px;
-        margin: auto;
-        margin-bottom: 30px;
-    }
 
-    .button {
-        width: 700px;
-        margin: auto;
-    }
-
-    .btn-add {
-        background: mediumorchid;
-        height: 45px;
-        line-height: 40px;
-        border: 1px solid mediumorchid;
-        color: #fff;
-        font-weight: 900;
-        padding: 0 20px;
-        cursor: pointer;
-    }
-
-    .icon-close {
-        cursor: pointer;
-        position: relative;
-    }
-
-    img {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        top: -35px;
-        right: -35px;
-    }
-
-    .box-color  {
-        padding: 200px 0;
-        display: flex;
-        justify-content: space-around;
-        text-align: center;
-        line-height: 150px;
-        font-weight: bold;
-    }
-
-    #div1,
-    #div2,
-    #div3,
-    #div4 {
-        color: #fff;
-        font-weight: bold;
-        font-size: 18px;
-    }
-</style>
 <body>
     <div class="warpper">
         <div class="box box-first">
@@ -69,24 +17,13 @@
                 <img src="images/cancel-icon.png" alt="icon">
             </div>
             <div class="box-color">
-                    <div id="div1" style="width:150px;height:150px;background-color:red;">TEXT 1</div>
-                    <div id="div2" style="width:150px;height:150px;background-color:green;">TEXT 2</div>
-                    <div id="div3" style="width:150px;height:150px;background-color:blue;">TEXT 3</div>
-                    <div id="div4" style="width:150px;height:150px;background-color:#ef4c67">TEXT APPEND</div>
+                    <div id="div1">TEXT 1</div>
+                    <div id="div2">TEXT 2</div>
+                    <div id="div3">TEXT 3</div>
+                    <div id="div4">TEXT APPEND</div>
             </div>       
-        </div>    
-
-        <div class="box">
-            <div class="icon-close">
-                <img src="images/cancel-icon.png" alt="icon">
-            </div>
-            <div class="box-color">
-                    <div id="div1" style="width:150px;height:150px;background-color:red;">TEXT 1</div>
-                    <div id="div2" style="width:150px;height:150px;background-color:green;">TEXT 2</div>
-                    <div id="div3" style="width:150px;height:150px;background-color:blue;">TEXT 3</div>
-                    <div id="div4" style="width:150px;height:150px;background-color:pink;">TEXT 4</div>
-            </div>       
-        </div>
+        </div> 
+           
     </div>
 
     <div class="button">
@@ -94,16 +31,3 @@
     </div>
 </body>
 </html>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".icon-close").click(function(){
-            $(this).parents('.box').remove();
-            //$('.box').remove();
-        });
-
-        $(".btn-add").click(function(){
-            $(".box-first").clone().appendTo('.warpper');
-        });
-    });
-</script>

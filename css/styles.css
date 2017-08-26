@@ -1,0 +1,71 @@
+.box {
+        border: 2px solid black;
+        width: 700px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        width: 700px;
+        margin: auto;
+    }
+
+    .btn-add {
+        background: mediumorchid;
+        height: 45px;
+        line-height: 40px;
+        border: 1px solid mediumorchid;
+        color: #fff;
+        font-weight: 900;
+        padding: 0 20px;
+        cursor: pointer;
+    }
+
+    .icon-close {
+        cursor: pointer;
+        position: relative;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -35px;
+        right: -35px;
+    }
+
+    .box-color  {
+        padding: 200px 0;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        line-height: 150px;
+        font-weight: bold;
+    }
+
+    #div1,
+    #div2,
+    #div3,
+    #div4 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        width: 150px;
+        height: 150px;
+    }
+
+    #div1 {
+        background-color:red;
+    }
+
+    #div2 {
+        background-color:blue;
+    }
+
+    #div3 {
+        background-color:green;
+    }
+
+    #div4 {
+        background-color:yellow;
+    }
